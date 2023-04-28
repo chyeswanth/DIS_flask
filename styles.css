@@ -1,0 +1,139 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/*Google fonts*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik:500,700,900&display=swap");
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  @-webkit-keyframes slideSection {
+    0% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    100% {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+    }
+  }
+  @keyframes slideSection {
+    0% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    100% {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+    }
+  }
+
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+.head h1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: midnightblue;
+}
+.head h2{
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+    background-color: midnightblue;
+    border-left: 5px solid white;
+    padding-left: 10px;
+}
+.head h3{
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+    background-color: midnightblue;
+    border-left: 5px solid white;
+    padding-left: 10px;
+}
+.container{
+    padding: 0px;
+}
+.container body{
+    width: fit-content;
+    display: flex;
+}
+.person{
+    display: flex;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border: 3px solid #ddd;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 200px;
+    overflow: hidden;
+}
+.person:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+.image{
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+   
+    border: 5px solid white;
+}
+.info h4{
+    margin-right: 10px;
+    text-align: center;
+}
+.info p{
+    margin-right: 10px;
+    display: flex;
+    text-align: justify;
+    flex-wrap: wrap;
+    flex: 200px;
+
+}
+
+.but{
+    background-color: midnightblue;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .about{
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
