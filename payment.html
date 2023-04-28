@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.pay 
+	{
+	float: left;
+	border: 1px solid #EAEAEA;
+	background-color: #E6F9FF;
+	width: 15%;
+	height: 400px;
+	}
+
+.pay button 
+	{
+        display: block;
+background-color: inherit;
+color: black;
+padding: 22px 16px;
+width: 100%;
+border: none;
+outline: none;
+text-align: left;
+cursor: pointer;
+font-size: 17px;
+border-radius: 8px;
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	}
+
+.pay button:hover 
+	{
+        background-color: #e6f2ff;
+	}
+
+.pay button.active 
+	{
+	background-color: #e6f2ff;
+	}
+
+
+    .paycontent {
+    float: left;
+    padding: 30px 40px;
+    border: none;
+    width: 70%;
+    border-left: none;
+    height: 400px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+
+input[type="text"], input[type="password"]
+{
+	display: block;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 6px solid #f7cac9;
+	background: #f7cac9;
+	padding: 5px;
+	margin: 0px 0px 2px 0px;
+	border: 1px solid #888888;		
+	width: 50%;
+	font-size: 16px;
+	color: #333;
+}
+
+p
+{
+	margin: 10px 0px 3px 0px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+}
+
+input[type="submit"], input[type="reset"]
+{
+	background-color: #ff857d;
+	color: #fff;
+	padding: 12px 25px;
+	margin: 15px 10px 20px 40px;
+	border: none;
+	border-radius: 25px;
+	cursor: pointer;
+	width: 30%;
+	font-size: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+body{
+    background-color:#E6F9FF ;
+}
+	
+	
+</style>
+</head>
+
+<body>
+	<div class="pay">
+		<button class="pl" onclick="openCity(event, 'Credit Card')"id="defaultOpen">Credit Card</button>
+		<button class="pl" onclick="openCity(event, 'Debit Card')">Debit Card</button>
+		<button class="pl" onclick="openCity(event, 'Debit Card +  Pin')">Debit Card +  Pin</button>
+		<button class="pl" onclick="openCity(event, 'Zelle')">Zelle</button>
+		<button class="pl" onclick="openCity(event, 'Gift Card')">Gift Card</button>
+	</div>	
+	
+	<div id="Credit Card" class="paycontent">
+		<h3>Pay by Credit Card</h3>
+		<p>Card Number</p>
+		<input type="text" name="card" placeholder="Enter Card Number">
+	
+		<p>Expiration Date</p>
+		<input type="month" name="month" placeholder="Month">
+	
+		<p>CVV</p>
+		<input type="text" name="cvv">
+	
+		<p>Card Holder Name</p>
+		<input type="text" name="name" placeholder="Enter Card Holder Name">
+		
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+	</div>
+	
+	<div id="Debit Card" class="paycontent">
+		<h3>Pay by Debit Card</h3>
+		<p>Card Number</p>
+		<input type="text" name="card" placeholder="Enter Card Number">
+	
+		<p>Expiration Date</p>
+		<input type="month" name="month" placeholder="Month">
+	
+		<p>CVV</p>
+		<input type="text" name="cvv">
+	
+		<p>Card Holder Name</p>
+		<input type="text" name="name" placeholder="Enter Card Holder Name">
+		
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+	</div>
+	
+	<div id="Debit Card +  Pin" class="paycontent">
+		<h3>Pay by Debit Card +  Pin</h3>
+		<p>Card Number</p>
+		<input type="text" name="card" placeholder="Enter Card Number">
+	
+		<p>Expiration Date</p>
+		<input type="month" name="month" placeholder="Month">
+	
+		<p>CVV</p>
+		<input type="text" name="cvv">
+	
+		<p>Card Holder Name</p>
+		<input type="text" name="name" placeholder="Enter Card Holder Name">
+		
+		<p>Pin</p>
+		<input type="password" name="pwd" placeholder="Enter Pin">
+		
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+	</div>
+	
+	<div id="Zelle" class="paycontent">
+		<h3>Pay by Zelle</h3>
+		<p>Zelle ID</p>
+		<input type="text" name="userid">
+	
+		
+		<input type="password" name="pwd">
+		
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+	</div>
+	
+	<div id="Gift Card" class="paycontent">
+		<h3>Pay by Gift Card</h3>
+		<p>Card Number</p>
+		<input type="text" name="card" placeholder="Enter Card Number">
+	
+		<p>Pin</p>
+		<input type="password" name="pwd" placeholder="Enter Pin">
+		
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+	</div>
+	
+	
+	
+	
+    <script>
+        function openCity(evt, mop) {
+            var i, paycontent, pl;
+            paycontent = document.getElementsByClassName("paycontent");
+            for (i = 0; i < paycontent.length; i++) {
+                paycontent[i].style.display = "none";
+            }
+        
+            pl = document.getElementsByClassName("pl");
+            for (i = 0; i < pl.length; i++) {
+                pl[i].className = pl[i].className.replace(" active", "");
+            }
+        
+            document.getElementById(mop).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    
+        function validateForm() {
+            var cardNumber = document.forms["paymentForm"]["cardNumber"].value;
+            var expDate = document.forms["paymentForm"]["expDate"].value;
+            var cvv = document.forms["paymentForm"]["cvv"].value;
+            var error = document.getElementById("error");
+    
+            if (cardNumber == "" || expDate == "" || cvv == "") {
+                error.innerHTML = "All fields are required";
+                return false;
+            }
+    
+            if (!/^\d+$/.test(cardNumber)) {
+                error.innerHTML = "Invalid card number";
+                return false;
+            }
+    
+            if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expDate)) {
+                error.innerHTML = "Invalid expiration date";
+                return false;
+            }
+    
+            if (!/^\d{3}$/.test(cvv)) {
+                error.innerHTML = "Invalid CVV";
+                return false;
+            }
+    
+            // Show loading indicator
+            document.getElementById("loading").style.display = "block";
+    
+            // Submit the form
+            document.forms["paymentForm"].submit();
+        }
+    </script>
+		
+</body>
+</html>

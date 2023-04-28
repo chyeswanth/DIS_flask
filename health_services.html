@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Remote Healthcare Platform</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+       box-sizing: border-box;
+      }
+     
+     
+      body {
+            background-color: rgb(240, 248, 255);
+          }
+
+          header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(25, 25, 112);
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-align: end;
+  transform: translate(380px, 0px);
+  color: lightblue !important;
+}
+/* Define the styles for the navigation menu */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+nav li {
+  margin-left: 20px;
+  align-items: center;
+  text-align: center;
+  text-align: center;
+}
+
+nav a {
+  color: #222222;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  align-items: center;
+  text-align: center;
+}
+
+/* Define the styles for the banner */
+.banner {
+  background-image: url('banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h1 {
+  font-size: 48px;
+  color: #ffffff;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.services {
+  padding: 50px;
+}
+
+.services h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #222222;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.services ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.services li {
+  flex-basis: 30%;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.services img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.services h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222222;
+  margin-bottom: 10px;
+}
+
+.services p {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* Define the styles for the call to action section */
+.cta {
+  background-color: #008000;
+  color: #ffffff;
+  padding: 50px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.cta p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta button {
+  padding: 20px 30px;
+  border-radius: 50px;
+  border: none;
+  background-color: #ffffff;
+  color: #008000;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 
+}
+    </style>
+  </head>
+  <body>
+	<header>
+		<div class="container">
+			<div id="logo">
+				<h1 style="color: lightblue;"><a href="#">DoctorDash</a></h1>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section id="banner">
+		<div class="container">
+			<h2>Your Gateway to Wellness and Vitality</h2>
+			<p>Experience Cutting-Edge Hassle-Free Medical Consultations and Healthcare Services at Your Fingertips</p>
+			<a href="#" class="button">Get Started</a>
+		</div>
+	</section>
+
+	<section id="services">
+		<div class="container">
+			<h2>Our Services</h2>
+			<div class="service">
+				<img src="https://source.unsplash.com/8OyKWQgBsKQ/300x200" alt="Telemedicine">
+				<h3>Telemedicine Consultations</h3>
+				<p>Get virtual consultations with licensed healthcare professionals from anywhere</p>
+			</div>
+			<div class="service">
+				<img src="https://source.unsplash.com/hzz8zvW6pEg/300x200" alt="Prescription Delivery">
+				<h3>Prescription Delivery</h3>
+				<p>Order prescription medications online and get them delivered to your doorstep</p>
+			</div>
+			<div class="service">
+				<img src="https://source.unsplash.com/WFy3B9-RxvQ/300x200" alt="Home Healthcare">
+				<h3>Home Healthcare</h3>
+				<p>Get healthcare services in the comfort of your own home, including physical therapy and nursing care</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="doctors">
+		<div class="container">
+			<h2>Our Doctors</h2>
+			<div class="doctor">
+				<img src="https://source.unsplash.com/KJiKlccSmrQ/300x200" alt="Doctor">
+				<h3>Dr. John Smith</h3>
+				<p>Cardiologist</p>
+			</div>
+			<div class="doctor">
+				<img src="https://source.unsplash.com/2l0CWTpcChI/300x200" alt="Doctor">
+				<h3>Dr. Sarah Lee</h3>
+				<p>Pediatrician</p>
+			</div>
+			<div class="doctor">
+				<img src="https://source.unsplash.com/uU6d_Sy6SHs/300x200" alt="Doctor">
+				<h3>Dr. James Kim</h3>
+				<p>Family Physician</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="about">
+		<div class="container">
+			<h2>About Us</h2>
+    </div>
+</section>
+</body>
+</html>

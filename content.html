@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/4363fa851e.js" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.esm.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/helpers.esm.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+  font-family:Arial, Helvetica, sans-serif;
+  margin:0;
+  padding: 20px;
+  }
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  color: #333;
+  text-align: center;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 32px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+    </style>
+</head>
+<body>
+  <div class="con">
+  <header style="background-color: midnightblue;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;">
+    <div class="container"></div>
+    <h1 style="color: #fff; font-size: 30px;">DoctorDash</h1>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+          <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('home') }}" style="color:black;">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('services') }}" style="color:black;">Services</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('aboutus') }}" style="color:black;">About Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('signup') }}" style="color:black;">Signup</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('login') }}" style="color:black;">Login</a>
+          </li>
+      </ul>
+  </div>
+</nav>
+
+
+<div class="spec-sec">
+    <h2 style="color: midnightblue;">Our Specialties</h2>
+    <div class="spec-grid">
+        <div class="spec-card"> 
+          <a href="{{ url_for('physician') }}"><img src="{{ url_for('static', filename='genphy.jpg')}}" alt="General Physician"></a>
+
+            <h3>General Physician</h3>
+            <p>Our general physicians provide comprehensive healthcare services for a variety of conditions and diseases. Schedule a consultation today to receive personalized care and support.</p>
+          </div>
+
+          <div class="spec-card">
+
+            <a href="{{ url_for('covidcon') }}"><img src="{{ url_for('static', filename='cov.jpg')}}" alt="covid-19 consultation"></a>
+            <h3>Covid-19 consultation</h3>
+            <p>Looking for online COVID-19 consultation? Our experienced doctors are here to provide you with virtual care and support from the comfort of your home. Book an appointment today to get started.</p>
+          </div>
+      <div class="spec-card">
+        <a href="{{ url_for('cardiology') }}"><img src="{{ url_for('static', filename='cariology.jpg')}}" alt="Cardiology"></a>
+        <h3>Cardiology</h3>
+        <p>Our team of expert cardiologists is dedicated to providing top-quality care for patients with heart conditions. From diagnosis to treatment, we offer personalized and comprehensive care to help you achieve optimal heart health.</p>
+      </div>
+      <div class="spec-card">
+        <a href="{{ url_for('derm') }}"><img src="{{ url_for('static', filename='derm.jpg')}}" alt="Dermatology"></a>
+        <h3>Dermatology</h3>
+        <p>Our team of skilled dermatologists offers a wide range of services to help you achieve healthy and radiant skin. From acne treatment to skin cancer screenings, we provide personalized care and support to meet your unique needs.</p>
+      </div>
+      <div class="spec-card">
+        <a href="{{ url_for('gas') }}"><img src="{{ url_for('static', filename='gastro.jpg')}}" alt="Gastroenterology"></a>
+        <h3>Gastroenterology</h3>
+        <p>If you're struggling with digestive issues, our team of gastroenterology specialists is here to help. We offer advanced diagnostic and treatment options for a variety of gastrointestinal conditions.</p>
+      </div>
+      <div class="spec-card">
+        <a href="{{ url_for('neuro') }}"><img src="{{ url_for('static', filename='neuro.jpg')}}" alt="Neurology"></a>
+        <h3>Neurology</h3>
+        <p>Our experienced team of neurologists specializes in the diagnosis and treatment of neurological conditions, including migraines, epilepsy, and stroke. With a focus on personalized care and the latest treatment options, we're here to help you achieve optimal neurological health.</p>
+      </div>
+      <div class="spec-card">
+        <a href="{{ url_for('opth') }}"><img src="{{ url_for('static', filename='opth.jpg')}}" alt="Ophthalmology"></a>
+        <h3>Ophthalmology</h3>
+        <p>Our team of skilled ophthalmologists is dedicated to providing comprehensive eye care services to help you maintain optimal vision and eye health. From routine eye exams to advanced treatment options for glaucoma and cataracts, we offer personalized care to meet your unique needs.</p>
+      </div>
+      <div class="spec-card">
+        <a href="{{ url_for('orth') }}"><img src="{{ url_for('static', filename='orth.jpg')}}" alt="Orthopedics"></a>
+        <h3>Orthopedics</h3>
+        <p>Our team of orthopedic specialists is here to help you get back to your active lifestyle. From joint replacements to sports injuries, we offer personalized treatment plans to address a wide range of orthopedic conditions.</p>
+      </div>
+      <div class="spec-card">
+        <a href="{{ url_for('pedia') }}"><img src="{{ url_for('static', filename='pedia.jpg')}}" alt="Pediatrics"></a>
+        <h3>Pediatrics</h3>
+        <p>Our team of caring and compassionate pediatricians is dedicated to providing top-quality care for children of all ages. From well-child exams to sick visits, we offer personalized care to meet your child's unique needs. </p>
+      </div>
+      <div class="spec-card">
+        <a href="{{ url_for('psych') }}"><img src="{{ url_for('static', filename='psy.jpg')}}" alt="Psychiatry"></a>
+        <h3>Psychiatry</h3>
+        <p>Our team of compassionate psychiatrists provides personalized care and treatment for a variety of mental health conditions, including depression, anxiety, and bipolar disorder. With a focus on evidence-based treatment and a patient-centered approach, we're here to help you achieve optimal mental health and wellness. Schedule a consultation today.</p>
+      </div>
+      <div class="spec-card">
+        <a href="{{ url_for('radio') }}"><img src="{{ url_for('static', filename='radio.jpg')}}" alt="Radiology"></a>
+        <h3>Radiology</h3>
+        <p>Our team of experienced radiologists is committed to providing high-quality imaging services to help diagnose and treat a wide range of medical conditions. From X-rays to MRIs, we use the latest technology and techniques to ensure accurate and timely diagnoses. </p>
+      </div>
+      <div class="spec-card">
+        <a href="{{ url_for('repro') }}"><img src="{{ url_for('static', filename='repro.jpg')}}" alt="Reproductive Health"></a>
+        <h3>Reproductive Health</h3>
+        <p>Our team of reproductive health specialists offers comprehensive care and support for individuals and couples looking to start or grow their families. From fertility treatments to reproductive surgery, we provide personalized care to help you achieve your reproductive goals.</p>
+      </div>
+      
+    </div>
+</div>
+<br>
+<br>
+ <div id>
+        <h2 style="text-align: center;">Appointments for Consultation with our doctors</h2>
+        <canvas id ="chart" width="250" height="200"></canvas>
+
+        <script src="{{ url_for('static', filename='chart.js')}}"></script>
+        </div>
+
+
+<footer style="margin-top:128px">
+  <section class="contact-us">
+      <h2 style="color:white;">Contact Us</h2>
+      <ul>
+          <li>Email: <a href="mailto:doctordash@usf.edu">doctordash@usf.edu</a></li>
+          <li>Phone: <a href="ph no.:+18135931789">+1 (813) 593-1789</a></li>
+      </ul>
+  </section>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Copyright © 2023,DoctorDash</a></p>
+
+
+</footer>
+
+  </div>
+
+    </body>
+    </html>

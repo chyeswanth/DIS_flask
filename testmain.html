@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remote Healthcare Platform</title>
+    <script src="https://kit.fontawesome.com/4363fa851e.js" crossorigin="anonymous"></script>
+   <style>
+
+
+.topleft {
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  font-size: 35px;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px
+  
+}
+
+.topleft2 {
+  position: absolute;
+  top: 250px;
+  left: 170px;
+  font-size: 35px;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px
+ 
+}
+
+.topleft3 {
+  position: absolute;
+  top: 300px;
+  left: 30px;
+  font-size: 20px;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  
+}
+
+.topleft4 {
+  position: absolute;
+  top: 520px;
+  left: 530px;
+  font-size: 35px;
+  color: midnightblue;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+.topleft5 {
+  position: absolute;
+  top: 570px;
+  left: 250px;
+  font-size: 25px;
+  color: midnightblue;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  
+}
+
+.edge{
+    float: right;
+}
+
+           * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+          }
+
+          body{
+            background-color: aliceblue;
+          }
+          header {
+			background-color: midnightblue;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            font-weight: bold;
+            -webkit-font-smoothing: antialiased;
+          }
+          nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: antiquewhite;
+  font-weight: 550;
+  -webkit-font-smoothing: antialiased;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+nav li a:hover {
+  background-color:cadetblue;
+}
+
+img {
+    width: 100%; 
+  height: 950px; 
+}
+.midnight-blue-btn {
+  background-color: #191970; /* midnight blue */
+  color: #fff; /* white text */
+  border: none; /* remove button border */
+  padding: 10px 20px; /* add padding */
+  border-radius: 5px; /* rounded corners */
+
+  cursor: pointer; /* change cursor on hover */
+  position: absolute;
+  top: 620px;
+  left: 570px;
+  font-weight: bold;
+  font-size:20px ;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Style the medical advice section */
+#contact {
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-left: 240px;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the section heading */
+#contact h3 {
+  font-size: 23px;
+  color: midnightblue;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Style the section divider 
+#contact hr {
+  border: none;
+  height: 2px;
+  background-color: #999;
+  margin-bottom: 30px;
+}
+*/
+/* Style the form labels */
+#contact label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  color: midnightblue;
+}
+
+/* Style the form inputs */
+#contact input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  -webkit-font-smoothing: antialiased;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form button */
+#contact button[type="submit"] {
+  width: 100%;
+  background-color: midnightblue;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; ;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease;
+}
+
+#contact button[type="submit"]:hover {
+  background-color: #555;
+}
+
+#contact input[name="Query"] {
+  width: 100%;
+  height: 200px;
+  resize: none;
+  border-radius: 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fa-user-plus {
+  font-size: 1em;
+  color: midnightblue;
+ margin-left: 870px;
+ margin-top: 14px;
+ -webkit-font-smoothing: antialiased;
+}
+
+footer {
+			background-color: midnightblue;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+            -webkit-font-smoothing: antialiased;
+		}
+    .contact-us {
+  background-color: midnightblue;
+  padding: 10px;
+}
+
+.contact-us h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.contact-us p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact-us ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.contact-us li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.contact-us a {
+  color: orange;
+  text-decoration: none;
+  border-bottom: 1px solid #0077c2;
+}
+
+.contact-us a:hover {
+  border-bottom: none;
+  background-color: silver;
+}
+
+.w3-top,.w3-bottom
+{position:fixed;width:100%;z-index:1}
+.w3-top{top:0}
+.w3-bottom{bottom:0}
+
+w3-col.s3{width:24.99999%}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("hos3.jpg");
+  min-height: 75%;
+}
+ </style>
+</head>
+<body>
+
+
+<div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+      <div class="w3-col s3">
+        <a href="Proj ld pg.html" class="w3-button w3-block w3-black">HOME</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#" class="w3-button w3-block w3-black">ABOUT</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="content.html"class="w3-button w3-block w3-black">Services</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Header with image -->
+  <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+      <span class="w3-tag">Open from 6am to 5pm</span>
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px">the<br>Cafe</span>
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+      <span class="w3-text-white">15 Adr street, 5015</span>
+    </div>
+  </header>
+
+    <section id="banner">
+		<div class="container">
+
+            <div class="topleft">Your Gateway to Wellness and Vitality </div>
+            <div class="topleft2">Take Online Doctor Consultation </div>
+            <div class="topleft3">Experience Cutting-Edge Hassle-Free Medical Consultations and Healthcare Services at Your Fingertips </div>
+            <button class="midnight-blue-btn">Consult now</button>
+            <div class="topleft4">20+ specialities</div>
+            <div class="topleft5">Say Goodbye to High Medical Bills! Consult with Top Doctors across specialities </div>
+
+        </div>
+		</div>
+	</section>
+
+    <section>
+    <div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" id="contact">
+        <h3 class="w3-center">Need Medical Advice? Ask a Doctor Online and Get Answers in Minutes!</h3>
+        <hr>
+      
+    
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-section">
+            <label>Name</label>
+            <input class="w3-input w3-border" type="text" required name="Name">
+          </div>
+          <div class="w3-section">
+            <label>Email</label>
+            <input class="w3-input w3-border" type="text" required name="Email">
+          </div>
+          <div class="w3-section">
+            <label>Phone No.</label>
+            <input class="w3-input w3-border" type="text" required name="Phone no.">
+          </div>
+          <div class="w3-section">
+            <label>Query</label>
+            <input class="w3-input w3-border" required name="Query">
+          </div>
+          <button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>
+        </form><br>
+    
+      </div>
+    </section>
+
+    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
+      <section class="contact-us">
+        <h2>Contact Us</h2>
+        <ul>
+          <li>Email: <a href="mailto:chamarthy1@usf.edu">chamarthy1@usf.edu</a></li>
+          <li>Phone: <a href="ph no.:+18135931789">+1 (813) 593-1789</a></li>
+        </ul>
+      </section>
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p class="w3-medium">Copyright © 2012,DoctorDash</a></p>
+
+
+      </footer>
+</body>
+</html>

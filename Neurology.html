@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cardiology Appointment</title>
+  <script src = "{{ url_for('static', filename='backend.js')}}"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    form {
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      max-width: 500px;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="email"], select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <header>
+    <h1>Neurology Appointment</h1>
+  </header>
+<form action="{{ url_for('addrecords') }}" method="POST">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name" name="name" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" name="email" required>
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input type="text" class="form-control" id="phone" name="phone" required>
+  </div>
+  <div class="form-group">
+    <label for="date">Preferred Date:</label>
+    <input type="date" class="form-control" id="date" name="date" required>
+    <script>
+      var today = new Date().toISOString().split('T')[0];
+      document.getElementById("date").setAttribute("min", today);
+    </script>
+  </div>
+  <div class="form-group">
+    <label for="time">Preferred Time:</label>
+    <select class="form-control" id="time" name="time" required>
+      <option value="">Select a time</option>
+      <option value="morning">Morning</option>
+      <option value="afternoon">Afternoon</option>
+      <option value="evening">Evening</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary" onclick="validateappoint(event)">Submit</button>
+
+  <a href="{{ url_for('list2') }}" style="float:right; color: darkblue ; line-height: 1.5px;">View  customers responses</a>
+  
+</form>
+
+
+  </div>
+
+</div>
+
+</body>
+</html>
