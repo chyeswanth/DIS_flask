@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Edit Contact Us Form</title>
+        <style>
+            body {
+                background-color: #f8f9fa;
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                padding: 20px;
+            }
+            h1 {
+                color: #343a40;
+                text-align: center;
+            }
+            form {
+                max-width: 500px;
+                margin: auto;
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 20px;
+            }
+            label {
+                font-weight: bold;
+                margin-bottom: 10px;
+                display: block;
+            }
+            input[type="text"], input[type="email"], input[type="query"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                border: 1px solid #ced4da;
+                box-sizing: border-box;
+                font-size: 16px;
+            }
+            input[type="submit"] {
+                background-color: #4a69bb;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #2c3e50;
+            }
+        </style>
+    </head>
+
+    <body>
+<h1>Edit contact-us form</h1>
+        {% for row in rows %}
+        <form action="{{ url_for('editrec') }}" method="POST">
+            <h3 style="color:blue">Patient Id ID: {{ row['rowid']}}</h3>
+            <input type="hidden" name="rowid" value="{{ row['rowid'] }}">
+            Name<br>
+            <input type="text" name="name" value="{{ row['name'] }}"/><br>
+
+            Email<br>
+            <input type="text" name="add" value="{{row['email']}}"/><br>
+
+            Phone No.<br>
+            <input type="text" name="Phone" value="{{ row['Phone'] }}"/><br>
+
+            Query<br>
+            <input type="query" name="query" value="{{ row['query'] }}"/><br>
+
+            <input type="submit" value="Submit" /><br>
+        </form>
+
+        {% endfor %}
+    </body>
+ </html>
+
+ 

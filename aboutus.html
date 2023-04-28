@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <script src="https://kit.fontawesome.com/4363fa851e.js" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  
+</head>
+
+<body>
+<div class ="about">
+    <header>
+        <div class="container"></div>
+        <h1>DoctorDash</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url_for('home') }}" style="color:black;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('services') }}" style="color:black;">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('aboutus') }}" style="color:black;">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('signup') }}" style="color:black;">Signup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('login') }}" style="color:black;">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+        <div class="head">
+            <h1 style="font-size: 30px;">ABOUT US</h1>
+            
+            <h3>Creators of the website</h3>
+        </div>
+    <section style="    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+    text-align: center;">
+        <div class="person">
+            <img src="{{ url_for('static', filename='sid.jpg')}}" class="image">
+            <div class="info">
+            <h4>Sai Siddartha Reddy Avuthu</h4>
+
+            <p> As a student of business analytics and information systems, Siddartha have been learning about the technologies that power visually appealing and interactive web pages. Specifically, he has been studying HTML, CSS, and JavaScript, and he finds it fascinating how these three technologies work together. he has incorporated a number of fresh and contemporary CSS style attributes into projects, including footer icons, as well as header and footer designs. Additionally, he has worked on all form validation, which involves ensuring that feedback forms and email and password inputs are validated correctly.
+            </p>
+            <a href="https://www.linkedin.com/in/sai-siddartha-reddy-avuthu"><button class="but">LinkedIn</button></a>
+        </div>
+        </div>
+
+        <div class="person">
+            <img src="{{ url_for('static', filename='yesh2.jpg')}}" class="image">
+            <div class="info">
+            <h4>Yeswanth Chamarthy</h4>
+            <p>Yeswanth is a graduate student currently pursuing a master's degree in business analytics and information systems. He have previous experience working as a data engineer at Tata Consultancy Services in India. He have a keen interest in web development and have been actively working on developing webpages, including the landing and services pages for a particular website. Additionally, He assisted with the layout of the website. His specific contributions have included creating charts for the services page, worked on the payment page and its validation, and modifying the CSS for the website. </p>
+            <a href="https://www.linkedin.com/in/yeswanth-chamarthy"><button class="but">LinkedIn</button></a>
+        </div>
+    </div>
+
+        <div class="person">
+            <img src="{{ url_for('static', filename='ani.jpg')}}" class="image">
+            <div class="info">
+            <h4>Anil Babu Davuluri</h4>
+            <p>As an experienced business analyst and Business Analytics and Information Systems student, I played a significant role in developing a website. My contributions included gathering information for the "about us" page, troubleshooting and problem-solving, and ensuring the website was compatible with a variety of devices. I also ensured uniform image size by compressing them. Additionally, I played a key role in developing the services page, as well as creating and validating payment forms.
+            </p>
+            <a href="https://www.linkedin.com/in/anil-davuluri-a29b8b134/"><button class="but">LinkedIn</button></a>
+        </div>
+    </div>
+
+        <div class="person">
+            <img src="{{ url_for('static', filename='vij4.jpg')}}" class="image" style="width: 300px; height: 300px;">
+            <div class="info">
+            <h4>Vijay Tej Pasagadugula</h4>
+            <p> Vijay is currently enrolled in a Master's degree program in Business Analytics and Information Systems at the University of South Florida. Prior to pursuing further education, he worked as a Data Warehouse Specialist at AT&T. He has previous experience in UX/UI designing and has a strong passion for web technologies. He has assisted in developing the services page and played a part in developing the website's concept. Specifically, he has worked on modifying and validating the login and sign-up pages. 
+            </p>
+            <a href=""><button class="but">LinkedIn</button></a>
+        </div>
+    </div>
+    </section>
+
+    <footer style="margin-top:128px">
+        <section class="contact-us">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>Email: <a href="mailto:doctordash@usf.edu">doctordash@usf.edu</a></li>
+                <li>Phone: <a href="ph no.:+18135931789">+1 (813) 593-1789</a></li>
+            </ul>
+        </section>
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p class="w3-medium">Copyright © 2023,DoctorDash</a></p>
+
+
+    </footer>
+</div>
+</body>
+
+</html>

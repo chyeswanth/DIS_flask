@@ -1,0 +1,87 @@
+<html>
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <style>
+        body {
+            background-image: url('https://example.com/background.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            padding: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th {
+            background-color: #555;
+            color: white;
+            font-weight: bold;
+            text-align: left;
+            padding: 10px;
+        }
+        
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        
+        td:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+        
+        form {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+        
+        input[type=submit] {
+            background-color: #4a69bb;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #3c5da9;
+        }
+    </style>
+</html>
+    <table >
+        <thead>
+            <td><strong>Patient ID</strong></td>
+            <td><strong>Name</strong></td>
+            <td><strong>Email</strong></td>
+            <td><strong>Ph No.</strong></td>
+            <td><strong>Query</strong></td>
+            <td></td>
+            <td></td>
+        </thead>
+
+        {% for row in rows %}
+        <tr>
+            <td>{{ row["rowid"] }}</td>
+            <td>{{ row["name"] }}</td>
+            <td> {{ row["email"]}}</td>
+            <td>{{ row["Phone"] }}</td>
+            <td>{{ row["query"] }}</td>
+            <td><form action="{{url_for('edit')}}" method="POST"><input type="hidden" name="id" value="{{ row['rowid'] }}"><input type="submit" value="Edit"></form> </td>
+               
+
+        </tr>
+        {% endfor %}
+    </table>
+</head>
+</html>

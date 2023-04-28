@@ -1,0 +1,85 @@
+
+<!DOCTYPE html >
+<html lang="en"></html>
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login Page</title>
+      <script src ="{{ url_for('static', filename='login.js')}}"></script>
+      <script src="https://kit.fontawesome.com/4363fa851e.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style1.css')}}">
+      <style>
+        
+         body {
+         width: 100%;
+         height: 100%;
+         font-family:Arial, Helvetica, sans-serif;
+         color: midnightblue;
+         background: mintcream;
+         background-image: url_for('static', filename='log2.jpg');
+         }
+
+        
+      </style>
+   </head>
+   <body>
+    <div class="container">
+      <div class="log">
+
+      <header>
+         <div class="container"></div>
+         <h1>DoctorDash</h1>
+     </header>
+ 
+     <nav>
+         <ul>
+             <form>
+                 <li><a href="{{ url_for('home') }}">Home</a></li>
+                 <li><a href="{{ url_for('services') }}">Services</a></li>
+                 <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+                 <li><a href="{{ url_for('login') }}">Login</a></li>
+ 
+                 <li><a href="{{ url_for('signup') }}">Signup</a></li>
+             </form>
+         </ul>
+     </nav>
+    
+      <div id="lo">
+          <form action="{{ url_for('add') }}" method="POST" onsubmit="return validateForm()">
+<label for="username">Email:</label>
+    <input type="text" id="username" name = "user" value="" onblur="checkUsername()">
+<span id="message1" style="color:red"></span>
+<label for="password">password:</label>
+    <input type="password" id="pswd" name = "pwd" value="">
+    <span id="message" style="color:blue"></span>
+    <br><br>
+    <div id="lower">
+      <input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
+      <input type="submit" value="Login">
+    </div>
+  </form>
+      </div>
+
+
+      <footer style="margin-top: 380px;">
+         <section class="contact-us">
+             <h2>Contact Us</h2>
+             <ul>
+                 <li>Email: <a href="mailto:doctordash@usf.edu">doctordash@usf.edu</a></li>
+                 <li>Phone: <a href="ph no.:+18135931789">+1 (813) 593-1789</a></li>
+             </ul>
+         </section>
+         <i class="fa fa-facebook-official w3-hover-opacity"></i>
+         <i class="fa fa-instagram w3-hover-opacity"></i>
+         <i class="fa fa-snapchat w3-hover-opacity"></i>
+         <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+         <i class="fa fa-twitter w3-hover-opacity"></i>
+         <i class="fa fa-linkedin w3-hover-opacity"></i>
+         <p class="w3-medium">Copyright © 2023,DoctorDash</a></p>
+ 
+
+     </footer>
+   </div>
+   </div>
+   </body>
+   </html>
